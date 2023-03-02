@@ -15,7 +15,7 @@ class CharacterTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridTile(
-      footer: GridTileBar(backgroundColor: Color(hashCode))
+      footer: builder(backgroundColor: Color(hashCode))
     );
   }
 }
