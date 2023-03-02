@@ -24,8 +24,12 @@ class HomeScreen extends StatelessWidget {
         future: fetchBbCharacters(),
         builder: (context, snapshot) {
           if (snapshot.hasData){
-            return GridView.builder()
-
+            return GridView.builder();
+          }
+          if (snapshot.hasError){
+              return Container(
+                  child: Text('something.xyz',textAlign: TextAlign.center,),
+                );
           }
         }
 
